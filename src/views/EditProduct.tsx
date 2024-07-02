@@ -2,7 +2,7 @@ import { Link, useActionData, ActionFunctionArgs, Form, redirect, useLoaderData,
 import { getProduct, updateProduct } from '../services/ProductServices';
 import Forms from '../components/Forms';
 import Error from '../components/Error';
-import { Products } from '../types';
+import { ProductsType } from '../types';
 
 
 export const loader = async ({params} : LoaderFunctionArgs) => {   
@@ -39,7 +39,7 @@ export const action = async ({request, params} : ActionFunctionArgs) => {
 const EditProduct = () => {
     
     const error = useActionData() as string 
-    const product = useLoaderData() as Products
+    const product = useLoaderData() as ProductsType
     
   return (
     <>

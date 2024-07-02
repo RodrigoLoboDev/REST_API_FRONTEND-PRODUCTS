@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { DraftProductsSchema, Product, Products, ProductsSchema, ProductSchema } from '../types';
+import { DraftProductsSchema, Product, ProductsType, ProductsSchema, ProductSchema } from '../types';
 
 export async function createProduct (datos : Product) {
     // console.log(datos);    
@@ -36,7 +36,7 @@ export async function getProducts() {
     }
 }
 
-export async function getProduct(id : Products['id']) {
+export async function getProduct(id : ProductsType['id']) {
     try {
         const url = `${import.meta.env.VITE_API_URL}/api/products/${id}`
         const { data } = await axios(url)        
@@ -53,7 +53,7 @@ export async function getProduct(id : Products['id']) {
     }
 }
 
-export async function updateProduct (datos : Product, id : Products['id']) {
+export async function updateProduct (datos : Product, id : ProductsType['id']) {
     // console.log(datos);    
     // console.log(Boolean(+datos.availability));
     
@@ -77,7 +77,7 @@ export async function updateProduct (datos : Product, id : Products['id']) {
     }
 }
 
-export async function deleteProduct(id: Products['id']) {    
+export async function deleteProduct(id: ProductsType['id']) {    
     try {
         const url = `${import.meta.env.VITE_API_URL}/api/products/${id}`
         await axios.delete(url)
@@ -86,7 +86,7 @@ export async function deleteProduct(id: Products['id']) {
     }
 }
 
-export async function updateAvailability(id: Products['id']) {  
+export async function updateAvailability(id: ProductsType['id']) {  
     try {
         const url = `${import.meta.env.VITE_API_URL}/api/products/${id}`
         await axios.patch(url)

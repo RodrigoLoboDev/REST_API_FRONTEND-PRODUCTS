@@ -18,4 +18,4 @@ export type Product = {
     [k: string]: FormDataEntryValue;
 }
 
-export type Products = z.infer<typeof ProductSchema>
+export type ProductsType = z.infer<typeof ProductSchema>

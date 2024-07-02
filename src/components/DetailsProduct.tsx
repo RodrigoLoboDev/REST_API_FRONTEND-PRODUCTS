@@ -1,10 +1,10 @@
 import { useNavigate, useFetcher } from "react-router-dom"
 import { formatearDinero } from "../helpers/indes"
-import { Products } from "../types"
+import { ProductsType } from "../types"
 import { deleteProduct } from "../services/ProductServices"
 
 type DetailsProductProp = {
-    product: Products
+    product: ProductsType
 }
 
 const DetailsProduct = ({product} : DetailsProductProp) => {

@@ -1,8 +1,8 @@
-import { Products } from "../types"
+import { ProductsType } from "../types"
 import { useMemo } from "react"
 
 type FormsProps = {
-    product: Products
+    product: ProductsType
 }
 
 const availabilityOptions = [
