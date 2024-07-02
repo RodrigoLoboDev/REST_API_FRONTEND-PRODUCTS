@@ -25,11 +25,11 @@ const DetailsProduct = ({product} : DetailsProductProp) => {
     }
 
   return (
-    <tr className="border-b ">
+    <tr className="border-b flex flex-col md:table-row ">
         <td className="p-3 text-lg text-gray-800">
             {product.name}
         </td>
-        <td className="p-3 text-lg text-gray-800">
+        <td className="p-3 text-xl md:text-lg text-gray-800 font-black md:font-normal">
             {formatearDinero(product.price)}
         </td>
         <td className="p-3 text-lg text-gray-800">
@@ -47,7 +47,7 @@ const DetailsProduct = ({product} : DetailsProductProp) => {
             </fetcher.Form>
         </td>
         <td className="p-3 text-lg text-gray-800 ">
-            <div className=" flex gap-4">
+            <div className=" flex gap-4 items-center justify-between md:justify-center">
                 <button
                     onClick={() => navigate(`productos/${product.id}/editar`)}
                     className=" py-2 px-5 border-none rounded-md bg-indigo-600 hover:bg-indigo-800 transition-all text-center font-bold text-white"

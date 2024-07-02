@@ -24,7 +24,7 @@ const Products = () => {
   return (
     <>
       <div className='flex justify-between items-center'>
-          <h2 className=' text-slate-500 text-2xl uppercase font-black'>Productos</h2>
+          <h2 className=' text-slate-500 text-xl md:text-2xl uppercase font-black'>Productos</h2>
           <Link
               className=' text-white text-center font-bold bg-indigo-600 hover:bg-indigo-800 transition-all py-2 px-5 rounded-md shadow-sm'
               to={'productos/nuevo'}
@@ -33,7 +33,7 @@ const Products = () => {
 
       <div className="p-2">
         <table className="w-full mt-5 table-auto">
-          <thead className="bg-slate-800 text-white">
+          <thead className="bg-slate-800 text-white hidden md:table-header-group">
               <tr>
                   <th className="p-2">Producto</th>
                   <th className="p-2">Precio</th>
