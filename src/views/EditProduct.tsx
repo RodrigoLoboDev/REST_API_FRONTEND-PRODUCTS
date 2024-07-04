@@ -10,12 +10,12 @@ export const loader = async ({params} : LoaderFunctionArgs) => {
     if (params.id !== undefined) {
         const product = await getProduct(+params.id)
         
-        if (!product) {
-            // Si el id del producto no existe podemos enviar este error que no es muy vistoso
-            // throw new Response('', {status: 404, statusText: 'Producto No Encontrado'})
-            // O redireccionar al usuario a la pagina principal 
-            return redirect('/')
-        }
+        // if (!product) {
+        //     // Si el id del producto no existe podemos enviar este error que no es muy vistoso
+        //     // throw new Response('', {status: 404, statusText: 'Producto No Encontrado'})
+        //     // O redireccionar al usuario a la pagina principal 
+        //     return redirect('/')
+        // }
         return product
     }
 }
